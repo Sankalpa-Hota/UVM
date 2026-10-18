@@ -1,0 +1,108 @@
+%Warning: System has stack size 8176 kb which may be too small; failed to request more using 'ulimit -s 254269605'
+UVM_INFO t/uvm/src/base/uvm_root.svh(457) @ 0: reporter [UVM/RELNOTES] 
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  This implementation of the UVM Library deviates from the 1800.2-2020
+  standard.  See the DEVIATIONS.md file contained in the release
+  for more details.
+
+----------------------------------------------------------------
+Accellera:1800.2:UVM:2020.3.2
+
+All copyright owners for this kit are listed in NOTICE.txt
+All Rights Reserved Worldwide
+----------------------------------------------------------------
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_WARNING t/uvm/src/base/uvm_test_runner.svh(207) @ 0: reporter [NO_DPI_USED] We are thinking of removing support for UVM_NO_DPI.  Please try this test without it and evaluate the impact
+UVM_INFO t/uvm/src/base/uvm_test_runner.svh(210) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
+UVM_INFO @ 0: reporter [RNTST] Running test adder_ral_test...
+UVM_INFO t/uvm/src/base/uvm_root.svh(531) @ 0: reporter [UVMTOP] UVM testbench topology:
+-----------------------------------------------------------------------
+Name                         Type                           Size  Value
+-----------------------------------------------------------------------
+<unnamed>                    uvm_root                       -     @67  
+  uvm_test_top               adder_ral_test                 -     @165 
+    env                      adder_env                      -     @240 
+      ag                     adder_agent                    -     @254 
+        ap_in                uvm_analysis_port              -     @347 
+        ap_out               uvm_analysis_port              -     @356 
+        drv                  adder_driver                   -     @373 
+          rsp_port           uvm_analysis_port              -     @390 
+          seq_item_port      uvm_seq_item_pull_port         -     @381 
+        mon                  adder_monitor                  -     @365 
+          ap_in              uvm_analysis_port              -     @528 
+          ap_out             uvm_analysis_port              -     @537 
+        sqr                  adder_sequencer                -     @399 
+          rsp_export         uvm_analysis_export            -     @407 
+          seq_item_export    uvm_seq_item_pull_imp          -     @513 
+          arbitration_queue  array                          0     -    
+          lock_queue         array                          0     -    
+          num_last_reqs      integral                       32    'd1  
+          num_last_rsps      integral                       32    'd1  
+      cov                    adder_coverage                 -     @326 
+        analysis_imp         uvm_analysis_imp               -     @334 
+      predictor              uvm_reg_predictor #(reg_item)  -     @295 
+        bus_in               uvm_analysis_imp               -     @307 
+        reg_ap               uvm_analysis_port              -     @317 
+      reg_ag                 reg_agent                      -     @270 
+        ap                   uvm_analysis_port              -     @556 
+        drv                  reg_driver                     -     @573 
+          rsp_port           uvm_analysis_port              -     @590 
+          seq_item_port      uvm_seq_item_pull_port         -     @581 
+        mon                  reg_monitor                    -     @565 
+          ap                 uvm_analysis_port              -     @728 
+        sqr                  reg_sequencer                  -     @599 
+          rsp_export         uvm_analysis_export            -     @607 
+          seq_item_export    uvm_seq_item_pull_imp          -     @713 
+          arbitration_queue  array                          0     -    
+          lock_queue         array                          0     -    
+          num_last_reqs      integral                       32    'd1  
+          num_last_rsps      integral                       32    'd1  
+      sb                     adder_scoreboard               -     @262 
+        imp_in               uvm_analysis_imp_in            -     @741 
+        imp_out              uvm_analysis_imp_out           -     @750 
+        imp_reg              uvm_analysis_imp_reg           -     @759 
+-----------------------------------------------------------------------
+UVM_INFO t/uvm/src/base/uvm_traversal.svh(345) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+UVM_WARNING t/uvm/src/base/uvm_traversal.svh(314) @ 0: reporter [NO_VISIT_CHECK] Because UVM_REGEX_NO_DPI is defined, no uvm component name constraints will be checked
+UVM_INFO t/uvm/src/reg/sequences/uvm_reg_hw_reset_seq.svh(92) @ 0: reporter@@rst_seq [STARTING_SEQ] 
+
+Starting rst_seq sequence...
+
+UVM_INFO t/uvm/src/reg/sequences/uvm_reg_hw_reset_seq.svh(153) @ 0: reporter@@rst_seq [uvm_reg_hw_reset_seq] Verifying reset value of register regmodel.CTRL in map "regmodel.default_map"...
+UVM_INFO t/uvm/src/reg/sequences/uvm_reg_hw_reset_seq.svh(153) @ 65000: reporter@@rst_seq [uvm_reg_hw_reset_seq] Verifying reset value of register regmodel.ID in map "regmodel.default_map"...
+UVM_INFO adder_scoreboard.sv(87) @ 95000: uvm_test_top.env.sb [SB] ID read add0 OK
+UVM_INFO adder_scoreboard.sv(87) @ 3055000: uvm_test_top.env.sb [SB] ADD_CNT read 64 OK
+UVM_INFO adder_tests.sv(50) @ 3065000: uvm_test_top [TEST] ADD_CNT read through RAL = 100
+UVM_INFO adder_scoreboard.sv(87) @ 3095000: uvm_test_top.env.sb [SB] LAST_SUM read 11 OK
+UVM_INFO adder_coverage.sv(26) @ 3155000: uvm_test_top.env.cov [COV] Coverage = 70.59%
+UVM_INFO adder_scoreboard.sv(100) @ 3155000: uvm_test_top.env.sb [SB] inputs=100 outputs=100 pass=100 fail=0 ignored(EN=0)=0 register checks=3
+UVM_INFO adder_scoreboard.sv(102) @ 3155000: uvm_test_top.env.sb [SB] Test PASS
+UVM_INFO t/uvm/src/base/uvm_report_server.svh(1009) @ 3155000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   15
+UVM_WARNING :    2
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[COV]     1
+[NO_DPI_TSTNAME]     1
+[NO_DPI_USED]     1
+[NO_VISIT_CHECK]     1
+[RNTST]     1
+[SB]     5
+[STARTING_SEQ]     1
+[TEST]     1
+[UVM/COMP/NAMECHECK]     1
+[UVM/RELNOTES]     1
+[UVMTOP]     1
+[uvm_reg_hw_reset_seq]     2
+
+- /Users/sankalpahota/eda_tools/uvm/uvm_pkg_all_v2020_3_2_nodpi.svh:5070: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.052 2026-09-05
+- Verilator: $finish at 3us; walltime 0.341 s; speed 9.254 us/s
+- Verilator: cpu 0.085 s on 1 threads; allocated 25 MB
