@@ -1,0 +1,77 @@
+%Warning: System has stack size 8176 kb which may be too small; failed to request more using 'ulimit -s 191688787'
+UVM_INFO t/uvm/src/base/uvm_root.svh(457) @ 0: reporter [UVM/RELNOTES] 
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  This implementation of the UVM Library deviates from the 1800.2-2020
+  standard.  See the DEVIATIONS.md file contained in the release
+  for more details.
+
+----------------------------------------------------------------
+Accellera:1800.2:UVM:2020.3.2
+
+All copyright owners for this kit are listed in NOTICE.txt
+All Rights Reserved Worldwide
+----------------------------------------------------------------
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_WARNING t/uvm/src/base/uvm_test_runner.svh(207) @ 0: reporter [NO_DPI_USED] We are thinking of removing support for UVM_NO_DPI.  Please try this test without it and evaluate the impact
+UVM_INFO t/uvm/src/base/uvm_test_runner.svh(210) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
+UVM_INFO @ 0: reporter [RNTST] Running test nvme_rel_err_test...
+UVM_INFO t/uvm/src/base/uvm_root.svh(531) @ 0: reporter [UVMTOP] UVM testbench topology:
+----------------------------------------------------------------
+Name                         Type                    Size  Value
+----------------------------------------------------------------
+<unnamed>                    uvm_root                -     @66  
+  uvm_test_top               nvme_rel_err_test       -     @160 
+    env                      nvme_rel_env            -     @235 
+      ag                     nvme_rel_agent          -     @249 
+        ap_in                uvm_analysis_port       -     @287 
+        ap_out               uvm_analysis_port       -     @296 
+        drv                  nvme_rel_driver         -     @313 
+          rsp_port           uvm_analysis_port       -     @330 
+          seq_item_port      uvm_seq_item_pull_port  -     @321 
+        mon                  nvme_rel_monitor        -     @305 
+          ap_in              uvm_analysis_port       -     @468 
+          ap_out             uvm_analysis_port       -     @477 
+        sqr                  nvme_rel_sequencer      -     @339 
+          rsp_export         uvm_analysis_export     -     @347 
+          seq_item_export    uvm_seq_item_pull_imp   -     @453 
+          arbitration_queue  array                   0     -    
+          lock_queue         array                   0     -    
+          num_last_reqs      integral                32    'd1  
+          num_last_rsps      integral                32    'd1  
+      cov                    nvme_rel_coverage       -     @265 
+        analysis_imp         uvm_analysis_imp        -     @273 
+      sb                     nvme_rel_scoreboard     -     @257 
+        imp_in               uvm_analysis_imp_in     -     @492 
+        imp_out              uvm_analysis_imp_out    -     @501 
+----------------------------------------------------------------
+UVM_INFO t/uvm/src/base/uvm_traversal.svh(345) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+UVM_WARNING t/uvm/src/base/uvm_traversal.svh(314) @ 0: reporter [NO_VISIT_CHECK] Because UVM_REGEX_NO_DPI is defined, no uvm component name constraints will be checked
+UVM_INFO nvme_rel_coverage.sv(23) @ 22375000: uvm_test_top.env.cov [COV] Coverage = 78.95%
+UVM_INFO nvme_rel_scoreboard.sv(71) @ 22375000: uvm_test_top.env.sb [SB] blocks pass=202 fail=0  known-answer checks=2  error flags raised (expected)=184
+UVM_INFO nvme_rel_scoreboard.sv(72) @ 22375000: uvm_test_top.env.sb [SB] Test PASS
+UVM_INFO t/uvm/src/base/uvm_report_server.svh(1009) @ 22375000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :    8
+UVM_WARNING :    2
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[COV]     1
+[NO_DPI_TSTNAME]     1
+[NO_DPI_USED]     1
+[NO_VISIT_CHECK]     1
+[RNTST]     1
+[SB]     2
+[UVM/COMP/NAMECHECK]     1
+[UVM/RELNOTES]     1
+[UVMTOP]     1
+
+- /Users/sankalpahota/eda_tools/uvm/uvm_pkg_all_v2020_3_2_nodpi.svh:5070: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.052 2026-09-05
+- Verilator: $finish at 22us; walltime 1.700 s; speed 13.162 us/s
+- Verilator: cpu 0.340 s on 1 threads; allocated 21 MB
